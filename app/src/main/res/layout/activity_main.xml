@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/blueish">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+
+        <TextView
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:text="@string/instructions"
+            android:textColor="@color/grey_90" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginBottom="15dp"
+            android:orientation="horizontal"
+            android:weightSum="12"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp">
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtWord"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:hint="Provide a word"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:gravity="center"
+                android:layout_margin="4dp"
+                android:layout_weight="8"
+                android:textColor="@color/grey_90">
+
+
+            </com.google.android.material.textfield.TextInputEditText>
+
+            <Button
+                android:id="@+id/buttonContinue"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@color/red_300"
+                android:text="Search"
+                android:onClick="Search"
+                android:layout_weight="4"
+                android:layout_margin="4dp"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/resultsnumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:layout_marginBottom="7dp"
+            android:layout_marginEnd="7dp"
+            android:layout_marginLeft="7dp"
+            android:layout_marginRight="7dp"
+            android:layout_marginStart="7dp"
+            android:layout_marginTop="10dp"
+            app:cardBackgroundColor="@color/colWhite"
+            android:padding="3dp"
+            android:layout_margin="10dp"
+            android:visibility="gone"
+            app:cardCornerRadius="10dp">
+
+            <TextView
+                android:id="@+id/results"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginStart="10dp"
+                android:textColorHint="#4846A6"
+                android:textColor="#4846A6"
+                android:background="@android:color/transparent"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:textSize="17sp"/>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <ListView
+            android:id="@+id/listview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"/>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

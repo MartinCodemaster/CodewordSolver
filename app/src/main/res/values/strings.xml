@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Crossword Solver</string>
+    <string name="app_name_underlined"><u>Crossword Solver</u></string>
+    <string name="instructions">Enter the word you wold like to search. \n\nUse dots(.) for missing letters.</string>
+    <string name="no_words_found">No words found</string>
+</resources>
